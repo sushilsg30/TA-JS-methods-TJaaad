@@ -32,12 +32,80 @@ Example:
    - `charAt` accepts a index (number data type) and return the character on that index in the string.
 
 2. `toUpperCase`
+ 
+   -Parameter: just have to put dot and function
+   -Return: convert whole data into uppercase.(string data type)
+   ```js
+   let name = `Arya`;
+   name.toUpperCase(); //"ARYA"
+   let tagline = `We will succeed`;
+   tagline.toUpperCase();
+   ```
+   `toUpperCase` :convert data into uppercase.
+
 3. `toLowerCase`
+   -Parameter: just have to put dot and function
+   -Return: convert whole data into uppercase.(string data type)
+   ```js
+   let name = `Arya`;
+   name.toLowerCase(); //"arya"
+   let tagline = `We will succeed`;
+   tagline.toLowerCase(); // 'we will succeed'
+   ```
+   `toLowerCase` :convert data into uppercase.
+
+
 4. `trim`
+  -Parameter: just have to put dot and function.
+  -Return: remove all the white spaces from both end.(string data type)
+   ```js
+   let name = `    Arya    `;
+   name.trim(); //"Arya";
+   let tagline = `    We will succeed    `;
+   tagline.trim(); // 'we will succeed';
+   ```
+   `trim` :Remove all white spaces from both the ends.
+
+
 5. `trimEnd`
+  -Parameter: just have to put dot and function.
+  -Return: remove all the white spaces from tail end.(string data type)
+   ```js
+   let name = `    Arya    `;
+   name.trimend(); //"Arya";
+   let tagline = `We will succeed    `;
+   tagline.trimend(); // 'we will succeed';
+   ```
+   `trim` :Remove all white spaces from tail ends.
+
+
 6. `trimStart`
+
+  -Parameter: just have to put dot and function.
+  -Return: remove all the white spaces from front end.(string data type)
+   ```js
+   let name = `    Arya    `;
+   name.frontend(); //"Arya";
+   let tagline = `    We will succeed`;
+   tagline.frontend(); // 'we will succeed';
+   ```
+   `fronttrim` :Remove all white spaces from tail ends.
+
 7. `concat`
+
+  -Parameter: One or more string to concatinate to string.
+  -Return: Concatenated string(string data type)
+   ```js
+   let name = `Arya`;
+   let surname =`Stark`;
+   name.concat(' ', surname); //"Arya Stark";
+   ```
+   `trim` :Concatenate two strings
+
+
 8. `endsWith`
+
+
 9. `includes`
 10. `indexOf`
 11. `lastIndexOf`
