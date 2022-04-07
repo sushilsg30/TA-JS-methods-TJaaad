@@ -5,13 +5,13 @@ console.log(`The length of ${message} is ${message.length}`);
 // Log the character at index 0 of the variable message like `The first character of [message] is [character]`
 console.log(`The first character of ${message} is ${message.charAt(0)}`);
 // Log the last character of message using length like `The last character of [message] is [character]`
-console.log(`The first character of ${message} is ${message.charAt(42)}`);
+console.log(`The first character of ${message} is ${message.charAt(length - 1)}`);
 // Log the index of word "you" in message
 console.log(`index of word "you" in message is ${message.indexOf("you")}`);
 // Log the index of word "still" in message
 console.log(`index of word "still" in message is ${message.indexOf("still")}`);
 // Log the index of word "answers" in message
-console.log(`index of word "answers" in message is ${message.indexOf("answer")}`);
+console.log(`index of word "answers" in message is ${message.indexOf("answers")}`);
 // Log true or false based on whether the word "answers" exist in message or not
 console.log(message.includes(`answers`));
 // Log true or false based on whether the word "they" exist in message or not
@@ -42,7 +42,9 @@ console.log(newMessage);
 newMessage = newMessage.replace(`thinking`,`decide`);
 console.log(newMessage);
 // Log all the characters from the message variable (you can user for..of loop on string)
-
+for(let char of message) {
+    console.log(char);
+}
 // Split all the words in message (split by " " space) and store it in a variable messageArray
 let messageArray = message.split(" ");
 console.log(messageArray);
