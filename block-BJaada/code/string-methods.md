@@ -100,19 +100,29 @@ Example:
    let surname =`Stark`;
    name.concat(' ', surname); //"Arya Stark";
    ```
-   `trim` :Concatenate two strings
+   `concat` :Concatenate two strings
 
 
 8. `endsWith`
 
+  -Parameter: The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.
+  -Return: true or false
+   ```js
+   let name = `Endgame Arya`;
+   let surname =`Stark`;
+   name.endWith (Arya); true
+   ```
+   `endWith`: We can verify the ending characters.
 
-9. `includes`
-10. `indexOf`
-11. `lastIndexOf`
-12. `padEnd`
-13. `padStart`
-14. `repeat`
-15. `replace`
-16. `slice`
-17. `split`
-18. `substring`
+9. `includes`:we can inclide new value character or number
+
+10. `indexOf`: It will search a word and display its index.
+
+11. `lastIndexOf`: same as index of but from tailend
+12. `padEnd`:It will apply padding from tail end and increase length to some specific length.
+13. `padStart`: It will apply padding at start.
+14. `repeat`:reoeat given string and how many times 
+15. `replace`:replace iven string
+16. `slice`:to cut down given string
+17. `split`: breakdown in between.
+18. `substring`:create two string out of one.
