@@ -31,7 +31,7 @@ console.log(fruits);
 fruits.splice(1, 0, 'Kiwi', 'Lemon');
 console.log(fruits);
 // Remove (slice) all the element from index 5
-fruits.slice(0,5);
+fruits.slice(5);
 console.log(fruits);
 // Create another array named moreFruits with values ['Berries', 'Melons']
 let moreFruits = ['Berries', 'Melons'];
@@ -39,7 +39,7 @@ let moreFruits = ['Berries', 'Melons'];
 // Concat moreFruits into fruits array (re-assign so the value gets updated)
 fruits = fruits.concat(moreFruits);
 
-console.log(fruits);
+fruits.forEach((fruits) => console.log(fruits));
 // Log the name of all fruit in console
 console.log(fruits);
 // Convert each fruit name to lowercase and log it
@@ -63,7 +63,7 @@ console.log(numbersTwo.flat(2));
 
 // Convert the numbersThree array to one level element.
 console.log(numbersThree.flat(4));
-
+// Infinity
 // Remove all sub-arrays to individual elements, log them and update the value of numbersThree to the new flat array.
 numbersThree = numbersThree.flat(4);
 
@@ -85,17 +85,23 @@ for(let el of numbersThree){
         oddNumbers.push(el);
     }
 }
+
+// let oddNumbers = numbersThree.filter(
+//     (elm) => elm % 2 !==0
+// );
+
 console.log(oddNumbers);
 // Create a new variable named evenNumbers that store all the even numbers in numbersThree array
 let evenNumbers = [];
 for(let el of numbersThree){
-    if(el % 2 !== 0) {
+    if(el % 2 === 0) {
         evenNumbers.push(el);
     }
 }
 console.log(evenNumbers);
 // Find the index of 10 in numbersThree array
 numbersThree.indexOf('10');
+numbersThree.find((num) => num === 10);
 // Reverse the values of numbersThree array
 numbersThree.reverse();
 
