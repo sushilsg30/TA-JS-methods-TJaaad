@@ -64,26 +64,31 @@ console.log(quoteSplitted);
 /*
 11. Change the word "today" in quoteSplitted to "tomorrow" and join all the words to form a sentance.
 */
+let index = quoteSplitted.indexOf('today');
+
+quoteSplitted[index] = "tomorrow";
+quoteSplitted.join(' ');
 
 
+console.log(quoteSplitted);
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
-console.log(quote.indexOf('o'));
+console.log(quote.indexOf('o', 8));
 /*
 13. Find the last index of letter "a" in quote.
 */
 console.log(quote.lastIndexOf('a'));
 /*
 14. Find the second last index of letter "a" in quote.
-*/
-console.log();
+*/ 
+let lastIndexOfA = quote.lastIndexOf("a", lastIndexOfA - 1 );
 /*
 15. Make the quote 70 character long. If it has less characters add rest as .......
 Example: "Hello" (convert to 10 characters) => "Hello....."
 Store the output in a new variable
 */
-console.log(quote.padEnd(70, '.'));
+ console.log(quote.padEnd(70, '.'));
 /*
 16. Do same as (15) but the ... should come in start. Store the output in a new variable
 */
