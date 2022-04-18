@@ -34,6 +34,7 @@ let wordsVowel = [...words].filter(
 
 // - Find the index of the word "rhythm"
 console.log(words.indexOf("rhythm"));
+console.log(words.findIndex((word => word === "rhythm")));
 // - Create a new array that contians words not starting with vowel.
 let wordStartWithVowel = words.filter((word) => {
   if (
@@ -47,7 +48,25 @@ let wordStartWithVowel = words.filter((word) => {
     }
     
 });
+
+
+// function checkVowel(words){
+//   return (
+//     words.includes("a") ||
+//     words.includes("i") ||
+//     words.includes("o") ||
+//     words.includes("u") ||
+//     words.includes("e")
+//   );
+// }
+
+// let notWithVowel = words.filter(
+//   (w) => !checkVowel(w[0])
+// ); 
 // - Create a new array that contianse words not ending with vowel
+// notWithVowel = words.filter(
+//   (w) => !checkVowel(w.length -1)
+// );
 
 let wordEnsWithVowel = words.filter((word) => {
   if (
@@ -64,10 +83,17 @@ let wordEnsWithVowel = words.filter((word) => {
 
 
 let numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
 console.log(numbers.length, `${numbers}`);
 // - Create a sumArray function that takes an array of number as a parameter, and calculate the sum of all its numbers
 let sumArray = [...numbers].reduce((acc,num) => acc + num);
 console.log(sumArray);
+
+// function sumArray(array) {
+//   return array.reduce((acc,cv) => {
+//     acc = acc +cv;
+//   }, 0);
+// }
 // - Make a new array that contains number multiplied by 3 like [6, 18, 27 ...]
 let multipleOfThree = [...numbers].filter((num) => num % 3 === 0);
 // - Create a new array that contains only even numbers
@@ -75,7 +101,8 @@ let evenNumbers = [...numbers].filter((num) => num % 2 === 0);
 // - Create  a new array that contains only odd numbers.
 let oddNumbers = [...numbers].filter((num) => num % 2 !== 0);
 // - Create a new array that should have true for even number and false for odd numbers.
-evenNumbers = [...numbers].map((num) => num % 2 === 0);
+evenOroddNumbers = [...numbers].map((num) => num % 2 === 0);
+console.log(evenOroddNumbers);
 // - Sort the above number in assending order.
 console.log([...numbers].sort((a,b) => a-b ));
 // - Does sort mutate the original array?// Yes Sort Mutates the original Array.
@@ -84,7 +111,14 @@ console.log([...numbers].sort((a,b) => a-b ));
 sumArray = [...numbers].reduce((acc,num) => acc + num);
 console.log(sumArray);
 //- Write a function averageNumbers that receives an array of numbers and calculate the average of the numbers
-let averageNumbers = sumArray/numbers.length;
+let averageqNumbers = sumArray/numbers.length;
+
+function averageNumbers(array) {
+  return  array.reduce((acc,cv) => {
+    acc = acc + cv;
+    return acc;
+  }, 0) / array.length;
+}
 
 let strings = [
   'seat',
