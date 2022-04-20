@@ -16,18 +16,50 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+let personGrade = persons.map((person) => person.grade);
+let gradeAverage = personGrade.reduce((acc,cv) => {
+  return acc + cv;
+})/personGrade.length
+console.log(gradeAverage);
 
 // Find the average grade of male
+let gardeMale = persons.filter((person) => {
+  if(person.sex === 'M') {
+    return person.grade;
+  }
+})
 
+gradeedMale = gardeMale.map((n) => n.grade);
+
+let averageGradeMale = gradeedMale.reduce((acc,cv) => acc+cv)/gradeedMale.length;
+console.log(averageGradeMale);
 // Find the average grade of female
 
+let gradeFemale = persons.filter((person) => {
+  if(person.sex === 'F') {
+    return person.grade;
+  }
+})
+
+gradeedFemale = gradeFemale.map((n) => n.grade);
+
+let averageGradeFemale = gradeedFemale.reduce((acc,cv) => acc+cv)/gradeedFemale.length;
+console.log(averageGradeFemale);
 // Find the highest grade
-
+console.log(personGrade.sort((a,b) => a -b).pop());
 // Find the highest grade in male
-
+console.log(gradeedMale.sort((a,b) => a-b).pop());
 // Find the highest grade in female
+console.log(gradeedFemale.sort((a,b) => a-b).pop());
 
 // Find the highest grade for people whose name starts with 'J' or 'P'
+
+let personJorP = persons.filter((person) => person.name.startsWith("J") || person.name.startsWith("P"));
+
+let personJorPgrade = personJorP.map((p) => p.grade);
+console.log(personJorPgrade.sort((a,b) => a-b).pop());
+
+
 
 const fruitBasket = [
   'banana',
@@ -90,16 +122,15 @@ Create these functions which accepts a number value and returns a number value:
   - `half` converts the value to half and return the integer value not decimal (use Math.round(21.5) => 21)
 */
 
-let pipeline = [
-  increment,
-  double,
-  decrement,
-  decrement,
-  double,
-  triple,
-  half,
-  increment,
-];
+// let pipeline = [increment, 
+//   double,
+//   decrement,
+//   decrement,
+//   double,
+//   triple,
+//   half,
+//   increment,
+// ];
 
 /*
 Using the pipeline variable that contains the collection of functions, taking the initial value 3 find the output.
@@ -115,18 +146,18 @@ EXAMPLE:
   ...
 */
 
-let pipeline2 = [
-  increment,
-  half,
-  double,
-  decrement,
-  decrement,
-  triple,
-  double,
-  triple,
-  half,
-  increment,
-  triple,
-];
+// let pipeline2 = [
+//   increment,
+//   half,
+//   double,
+//   decrement,
+//   decrement,
+//   triple,
+//   double,
+//   triple,
+//   half,
+//   increment,
+//   triple,
+// ];
 
 // Find the output using pipeline2 the initial value if 8
